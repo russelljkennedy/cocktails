@@ -88,14 +88,14 @@ button.hamburger {
 .cross{
   background:none;
   position:absolute;
-  top:10px;
+  top:0;
   right:0;
-  padding:7px 15px 0px 15px;
+  line-height:30px;
+  padding:5px 15px 0px 15px;
   color: #f052c4;
   color: var(--pink);
   border:0;
-  font-size:3em;
-  line-height:65px;
+  font-size:1.4em;
   font-weight:bold;
   cursor:pointer;
   outline:none;
@@ -161,7 +161,7 @@ button.hamburger {
   font-family: 'Ranga', cursive;
 }
 .nav-links li {
-  margin: 0 7vw;
+  margin: 0 6vw;
 }
 #topReturn {
   display: none;
@@ -275,7 +275,7 @@ button.hamburger {
 }
 #sectionThree {
   display: inline-flex;
-  margin: 0 30px;
+  margin: 0 0 0 48px;
 }
 .spirit-image {
   background-image: url(../img/mixing.jpeg);
@@ -285,7 +285,7 @@ button.hamburger {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 65vw;
+  width: 60vw;
 }
 .spirit-text {
   background: #ffff31;
@@ -390,6 +390,7 @@ footer p {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 2fr;
+    margin: 0 30px;
   }
   .spirit-image {
     width: auto;
@@ -403,76 +404,102 @@ footer p {
 /* Media queries */
 @media only screen and (max-width:1250px) {
   .nav-links li {
-    margin: 0 6vw;
+    margin: 0 5.5vw;
   }
   .box {
     height: 365px;
   }
-  @supports (display: grid) {}
+  #sectionThree {
+    margin: 0 0 0 45px;
+  }
+  .spirit-image {
+    width: 59vw;
+  }
+  @supports (display: grid) {
     .nav-links li {
       margin: 0;
     }
     .box {
       height: auto;
     }
+    #sectionThree {
+      margin: 0 30px;
+    }
+    .spirit-image {
+      width: auto;
+    }
+  }
 }
 @media only screen and (max-width:1100px) {
   .nav-links li {
-    margin: 0 5.5vw;
+    margin: 0 5vw;
   }
   .box {
     width: 45%;
-    margin-top: 1%;
+    margin-top: 20px;
   }
-  @supports (display: grid) {}
+  @supports (display: grid) {
     .nav-links li {
       margin: 0;
     }
     .box {
       width: auto;
     }
+  }
 }
 @media only screen and (max-width:1000px) {
   .nav-links li {
-    margin: 0 5vw;
+    margin: 0 4.5vw;
   }
-  @supports (display: grid) {}
+  @supports (display: grid) {
     .nav-links li {
       margin: 0;
     }
+  }
 }
 @media only screen and (max-width:930px) {
   .nav-links li {
-    margin: 0 4.5vw;
+    margin: 0 4vw;
   }
-  @supports (display: grid) {}
+  #sectionThree {
+    margin-left: 40px
+  }
+  @supports (display: grid) {
     .nav-links li {
       margin: 0;
     }
+    #sectionThree {
+      margin-left: 30px;
+    }
+  }
 }
 @media only screen and (max-width:850px) {
   .nav-links li {
-    margin: 0 3.5vw;
+    margin: 0 3vw;
   }
   .box {
     width: 95%;
   }
-  @supports (display: grid) {}
+
+  @supports (display: grid) {
     .nav-links li {
       margin: 0;
     }
     .box {
       width: auto;
     }
+
+  }
 }
 @media only screen and (max-width:800px) {
   .nav-links li {
-    margin: 0 3vw;
+    margin: 0 2.5vw;
   }
-  @supports (display: grid) {}
+  @supports (display: grid) {
     .nav-links li {
       margin: 0;
     }
+  }
 }
 @media only screen and (max-width:750px) {
   /* Make the popout nav visible */
@@ -491,14 +518,18 @@ footer p {
   .box p {
     font-size: 1.15rem;
   }
+  #sectionThree {
+    margin-left: 35px;
+  }
   .spirit-text,
   .spirit-image {
-    width: 45vw;
+    width: 44vw;
   }
 
   @supports (display: grid) {
     #sectionThree {
       grid-template-columns: 1fr 1fr;
+      margin: 0 30px;
     }
     .spirit-text,
     .spirit-image {
@@ -523,8 +554,8 @@ footer p {
   }
   .spirit-text,
   .spirit-image {
-    width: 95vw;
-    margin-top: 4%;
+    width: 91%;
+    margin-top: 10px;
   }
   @supports (display: grid) {
     #sectionThree {
