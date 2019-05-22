@@ -231,17 +231,14 @@ button.hamburger {
 .about {
   padding-top: 50px;
 }
-
 /* Menu section */
 .menu {
   padding-top: 50px;
 }
-
 /* Boxes */
 .boxes {
   display: inline-flex;
   flex-wrap: wrap;
-  /* Auto fits contents for CSS grid - no need to specify in media queries until later on */
   padding: 0 30px;
 }
 .box {
@@ -378,7 +375,7 @@ footer p {
   .boxes {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     flex-wrap: nowrap;
   }
   .box {
@@ -457,6 +454,13 @@ footer p {
     }
   }
 }
+@media only screen and (max-width:940px) {
+  @supports (display: grid) {
+    .boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
 @media only screen and (max-width:930px) {
   .nav-links li {
     margin: 0 4vw;
@@ -484,6 +488,9 @@ footer p {
   @supports (display: grid) {
     .nav-links li {
       margin: 0;
+    }
+    .boxes {
+      grid-template-columns: 1fr;
     }
     .box {
       width: auto;
